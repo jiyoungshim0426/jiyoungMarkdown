@@ -16,6 +16,7 @@ public class Document implements MDElement{
 	}
 	
 	public Document(String input, String output){
+		System.out.println("document created");
 		this.inputname = input;
 		this.outputname = output;
 		

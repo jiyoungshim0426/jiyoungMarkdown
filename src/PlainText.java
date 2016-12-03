@@ -8,7 +8,7 @@ public class PlainText extends Token{
 	
 	@Override
 	public void accept(MDElementVisitor v) {
-		System.out.println("plaintext visited");
+		v.visitToken(this);
 	}
 
 }

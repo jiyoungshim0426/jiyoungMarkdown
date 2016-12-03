@@ -15,13 +15,13 @@ public class PlainVisitor implements MDElementVisitor{
 	@Override
 	public void visitNode(Node n) {
 		// TODO Auto-generated method stub
-		
+		System.out.println("node visited");
 	}
 
 	@Override
 	public void visitToken(Token t) {
 		// TODO Auto-generated method stub
-		
+		System.out.println("token visited");
 	}
 
 }
