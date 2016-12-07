@@ -6,13 +6,10 @@ public class Document implements MDElement{
 	protected ArrayList<Node> nodelist = new ArrayList<Node>();
 	
 	@Override
-	public void accept(MDElementVisitor v) {
+	public String accept(MDElementVisitor v) {
 		// TODO Auto-generated method stub
-		for(int i=0;i<nodelist.size();i++){
-			nodelist.get(i).accept(v);
-		}
-		System.out.println("documentaccept");
-		v.visitDocument(this);
+		return v.visitDocument(this);
+//		System.out.println("documentaccept");	
 	}
 	
 	public Document(String input, String output){
@@ -20,11 +17,16 @@ public class Document implements MDElement{
 		this.inputname = input;
 		this.outputname = output;
 		
-		String nodecontents1 = "contentsofnode1";
-		String nodecontents2 = "contentsofnode2";
-		
-		nodelist.add(new Header(1,nodecontents1));
+		//String nodecontents1 = "contentsofnode1";
+		//String nodecontents2 = "contentsofnode2";
+		//nodelist.add(new Header(1,nodecontents1));
 	}
+	
+	public void addNode(Node node){
+		System.out.println("add node function");
+		nodelist.add(node);
+	}
+	
 	
 
 	public String getOutput(){

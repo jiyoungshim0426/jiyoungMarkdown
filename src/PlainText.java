@@ -3,12 +3,12 @@ public class PlainText extends Token{
 	
 	public PlainText(String plaintext){
 		this.contents = plaintext;
-		System.out.println("plaintext");
+		System.out.println("plaintext created");
 	}
 	
 	@Override
-	public void accept(MDElementVisitor v) {
-		v.visitToken(this);
+	public String accept(MDElementVisitor v) {
+		return v.visitToken(this);
 	}
-
+	
 }

@@ -1,4 +1,3 @@
 public interface MDElement {
-	public abstract void accept(MDElementVisitor v);
-
-}
+	public abstract String accept(MDElementVisitor v);
+	}
